@@ -304,13 +304,13 @@ function way_function (way, result)
         result.backward_speed = walking_speed
         result.forward_mode = mode.pushing_bike
         result.backward_mode = mode.pushing_bike
-      elseif foot_forward == 'yes' then
+      end
+      if foot_forward == 'yes' then
         result.forward_speed = walking_speed
         result.forward_mode = mode.pushing_bike
-        result.backward_mode = mode.inaccessible
-      elseif foot_backward == 'yes' then
-        result.forward_speed = walking_speed
-        result.forward_mode = mode.inaccessible
+      end
+      if foot_backward == 'yes' then
+        result.backward_speed = walking_speed
         result.backward_mode = mode.pushing_bike
       end
     end
